@@ -1,12 +1,28 @@
 <resources>
-    <!-- detail -->
-    <dimen name="detail_body_text_size">22sp</dimen>
-    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
+    <bool name="detail_is_card">false</bool>
+    <dimen name="detail_photo_height">304dp</dimen>
+    <dimen name="detail_card_top_margin">@dimen/detail_photo_height</dimen>
+    <dimen name="detail_card_max_width">10000dp</dimen>
 
-    <dimen name="fab_elevation">2dp</dimen>
-    <dimen name="fab_press_translation_z">6dp</dimen>
+    <integer name="list_column_count">1</integer>
+    <dimen name="bar_height">56dp</dimen>
+    <dimen name="side_margin">16dp</dimen>
+    <dimen name="top_margin">16dp</dimen>
+    <bool name="multi_column">false</bool>
+    <dimen name="list_title_text_size">14sp</dimen>
+    <dimen name="list_subheading_text_size">12sp</dimen>
+    <dimen name="content_text_size">14sp</dimen>
+    <dimen name="content_padding_large">16dp</dimen>
+    <dimen name="content_padding">8dp</dimen>
+    <dimen name="content_padding_small">4dp</dimen>
+    <dimen name="article_tile_image_width">100dp</dimen>
+    <dimen name="content_margin">8dp</dimen>
+    <dimen name="detail_title_text_size">24sp</dimen>
+    <dimen name="detail_subheading_text_size">18sp</dimen>
+
+    <dimen name="fab_elevation">4dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
     <dimen name="card_elevation">4dp</dimen>
     <dimen name="card_corner_radius">0dp</dimen>
-
+    <dimen name="fab_dimension">56dp</dimen>
 </resources>
