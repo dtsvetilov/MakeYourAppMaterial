@@ -10,12 +10,15 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.Html;
+import android.text.Spanned;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.View;
@@ -49,8 +52,20 @@ public class ArticleListActivity extends AppCompatActivity implements LoaderMana
 
         mSwipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
 
+        android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setLogo(R.drawable.logo);
+        getSupportActionBar().setTitle("");
+
+        CoordinatorLayout coordinatorContainer = findViewById(R.id.main_container);
+
         mRecyclerView = findViewById(R.id.recycler_view);
         getLoaderManager().initLoader(0, null, this);
+
+        Spanned snackbarContent = Html.fromHtml("<font color=\"#ffffff\">" + ItemsContract.BASE_URI.toString() + "</font>");
+        Snackbar snackbar = Snackbar.make(coordinatorContainer, snackbarContent, Snackbar.LENGTH_LONG);
+        snackbar.show();
 
         if (savedInstanceState == null) {
             refresh();
